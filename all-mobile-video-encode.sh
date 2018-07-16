@@ -13,5 +13,5 @@ do
 	echo "$EXEC '$FILE'" > temp_pipe &
 done;
 
-cat temp_pipe > at now + 1 minute
+cat temp_pipe | at now + 1 minute
 rm temp_pipe
