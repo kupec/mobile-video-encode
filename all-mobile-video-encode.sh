@@ -3,7 +3,11 @@
 SCRIPT_DIR=$(dirname $0)
 EXEC=${SCRIPT_DIR}/mobile-video-encode.sh
 
-FILES=(*)
+if [ $# -gt 0 ]; then
+	FILES=("$@")
+else
+	FILES=(*)
+fi;
 
 mkfifo temp_pipe
 
